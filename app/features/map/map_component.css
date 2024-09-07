@@ -1,0 +1,25 @@
+.pac-container {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0% 0% 5% 5%;
+    border: 0;
+    z-index: 0;
+}
+
+.pac-item {
+    border: 0;
+    color: rgba(245, 245, 245, 0.75);
+}
+
+.pac-matched {
+    color: aliceblue;
+}
+
+.pac-item-query {
+    color: rgba(245, 245, 245, 0.75);
+}
+
+.pac-item:hover {
+    background: rgb(29, 31, 31);
+    border: 1px solid rgba(245, 245, 245, 0.2);
+}

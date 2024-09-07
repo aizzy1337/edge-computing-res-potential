@@ -1,0 +1,50 @@
+.title-div {
+    font-size: 15vh;
+    font-weight: 1000;
+    margin-top: -10vh;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+
+.cover-div {
+    height: 10vh;
+    width: 90vw;
+    background: linear-gradient(
+        to bottom,
+        #00000000 20%,
+        #000000 60%
+    );
+}
+
+.second-title-div {
+    font-size: 3vh;
+    margin-top: -4vh;
+    margin-bottom: 4vh;
+    font-weight: 200;
+    width: 100vw;
+}
+
+.title-p {
+    background: linear-gradient(
+        to right,
+        #9b21e2 20%,
+        #5f0692 30%,
+        #110dfa 70%,
+        #3330e0 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 3s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

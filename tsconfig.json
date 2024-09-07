@@ -24,6 +24,6 @@
         "@cloudflare/workers-types/2023-07-01"
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/features/map/map-component.jsx", "app/features/background/background-component.jsx"],
   "exclude": ["node_modules"]
 }
