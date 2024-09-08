@@ -1,28 +1,101 @@
-.title-div {
-    font-size: 15vh;
-    font-weight: 1000;
-    margin-top: -10vh;
-    position: absolute;
-    z-index: -1;
+.title-component-div {
     width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.cover-div {
-    height: 10vh;
-    width: 90vw;
-    background: linear-gradient(
-        to bottom,
-        #00000000 20%,
-        #000000 60%
-    );
+@media screen and (max-width: 430px) {
+    .title-div {
+        font-size: 10vw;
+        font-weight: 1000;
+        margin-top: -18vh;
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+    }
+
+    .second-title-div {
+        font-size: 4vw;
+        margin-top: -4vh;
+        margin-bottom: 4vh;
+        font-weight: 200;
+        width: 100vw;
+    }
+
+    .cover-div {
+        margin-top: -5vw;
+        justify-self: flex-end;
+        height: 10vw;
+        width: 90vw;
+        background: linear-gradient(
+            to bottom,
+            #00000000 20%,
+            #000000 60%
+        );
+    }
 }
 
-.second-title-div {
-    font-size: 3vh;
-    margin-top: -4vh;
-    margin-bottom: 4vh;
-    font-weight: 200;
-    width: 100vw;
+@media screen and (min-width: 430px) and (max-width: 1120px) {
+    .title-div {
+        font-size: 8.5vw;
+        font-weight: 1000;
+        margin-top: -20vh;
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+    }
+
+    .second-title-div {
+        font-size: 3vw;
+        margin-top: -4vh;
+        margin-bottom: 4vh;
+        font-weight: 200;
+        width: 100vw;
+    }
+
+    .cover-div {
+        justify-self: flex-end;
+        height: 10vw;
+        margin-top: -5vw;
+        width: 90vw;
+        background: linear-gradient(
+            to bottom,
+            #00000000 20%,
+            #000000 60%
+        );
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .title-div {
+        font-size: 7vw;
+        font-weight: 1000;
+        margin-top: -14vh;
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+    }
+
+    .second-title-div {
+        font-size: 2vw;
+        margin-top: -4vh;
+        margin-bottom: 4vh;
+        font-weight: 200;
+        width: 100vw;
+    }
+
+    .cover-div {
+        justify-self: flex-end;
+        height: 5vw;
+        width: 90vw;
+        background: linear-gradient(
+            to bottom,
+            #00000000 20%,
+            #000000 60%
+        );
+    }
 }
 
 .title-p {

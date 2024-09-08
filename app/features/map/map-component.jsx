@@ -6,6 +6,7 @@ import {
   Marker,
   Autocomplete,
 } from "@react-google-maps/api";
+import Link from 'next/link'
 import "./map_component.css"
 
 const Map = () => {
@@ -37,31 +38,42 @@ const Map = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "20px"
-      }}
-    >
-      <Autocomplete
-        onLoad={(autocomplete) => {
-          autocompleteRef.current = autocomplete;
-        }}
-        onPlaceChanged={handlePlaceChanged}
-        options={{ fields: ["address_components", "geometry", "name"] }}
-        mapContainerStyle
-      >
-        <input type="text" placeholder="Search for location..." class="bg-black-50 border border-white-300 text-white-900 text-lg text-center rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow shadow-blue-500/50 focus:shadow-md focus:shadow-white" style={{ width: "20vw", height: "3vw" }}/>
-      </Autocomplete>
+    <div className="map-div">
+      <div className="navigation">
+        <Autocomplete
+          onLoad={(autocomplete) => {
+            autocompleteRef.current = autocomplete;
+          }}
+          onPlaceChanged={handlePlaceChanged}
+          options={{ fields: ["address_components", "geometry", "name"] }}
+          mapContainerStyle
+        >
+          <input type="text" placeholder="Search for location..." class="bg-black-50 border border-white-300 text-white-900 text-lg text-center rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow shadow-blue-500/50 focus:shadow-md focus:shadow-white" id="autocomplete"/>
+        </Autocomplete>
+        <div className="location">
+          <p><b>Lat:</b> {location.lat}°</p>
+          <p><b>Lng:</b> {location.lng}°</p>
+        </div>
+        <div className="button">
+          <Link
+            href={{
+              pathname: '/loading',
+              query: {
+                lat: location.lat,
+                lng: location.lng
+              }
+            }}
+          >
+            <button type="button" class="bg-black-50 border border-white-300 text-white-900 text-lg text-center rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-black dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow shadow-blue-500/50 focus:shadow-md focus:shadow-white hover:shadow-md hover:shadow-white">Generate raport</button>
+          </Link>
+        </div>
+      </div>
       
       <GoogleMap
         zoom={zoom}
         center={center}
         mapContainerClassName="map"
-        mapContainerStyle={{ width: "80vw", height: "30vw", margin: "auto", borderRadius: "20px"}}
+        mapContainerStyle={{ width: "80vw", height: "60vh", borderRadius: "20px"}}
         mapTypeId="roadmap"
         onClick={changeLocation}
       >

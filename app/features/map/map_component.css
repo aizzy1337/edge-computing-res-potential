@@ -23,3 +23,34 @@
     background: rgb(29, 31, 31);
     border: 1px solid rgba(245, 245, 245, 0.2);
 }
+
+.map-div {
+    display: "flex";
+    flex-direction: "column";
+    justify-content: "center";
+    align-items: "center";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+#autocomplete {
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 20px;
+}
+
+.location {
+    width: 40vw;
+    font-size: 1vw;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.button {
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 20px;
+}
