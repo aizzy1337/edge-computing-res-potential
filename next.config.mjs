@@ -16,6 +16,10 @@ const nextConfig = {
     };
     return config;
   },
+  experimental: {
+    runtime: 'experimental-edge',
+  },
+  swcMinify: true,
 };
 
 export default nextConfig;
